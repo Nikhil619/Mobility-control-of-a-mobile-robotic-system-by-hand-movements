@@ -32,7 +32,7 @@ cap.set(4, 240) #setting the vertical frame size
 hasFrame, frame = cap.read()
 
 
-vid_writer = cv2.VideoWriter('output_video.mp4',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame.shape[1],frame.shape[0]))
+vid_writer = cv2.VideoWriter('output_video.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (frame.shape[1],frame.shape[0]))
 
 net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 if device == "cpu":
@@ -96,8 +96,9 @@ while cv2.waitKey(1) < 0:
                     elif y > 120:
                         linear_velocity = -(y - 120)*5/120
                         angular_velocity = -(x - 180)*np.pi/140
-                cv2.putText(frame, "linear_velocity="+str(linear_velocity), (int(60), int(40)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1, lineType=cv2.LINE_AA)
-                cv2.putText(frame, "angular_velocity="+str(angular_velocity), (int(60), int(28)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1, lineType=cv2.LINE_AA)
+                cv2.circle(frame, (int(x), int(y)), 3, (0, 255, 255), thickness=-1, lineType=cv2.FILLED)
+                cv2.putText(frame, "linear_velocity="+str(linear_velocity)+" m/s", (int(27), int(40)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1, lineType=cv2.LINE_AA)
+                cv2.putText(frame, "angular_velocity="+str(angular_velocity)+" rad/s", (int(27), int(28)), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1, lineType=cv2.LINE_AA)
                 # Add the point to the list if the probability is greater than the threshold
                 points.append((int(x), int(y)))
             else :
