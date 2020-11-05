@@ -22,7 +22,7 @@ err_angular = angular velocity error
 """
 
 def PI_CONTROLLER(linear_velocity, angular_velocity, err_linear_integral, err_angular_integral):
-	err_linear_integral = 0
+    err_linear_integral = 0
     err_angular_integral = 0
 
     k_p = 2
@@ -53,7 +53,7 @@ def PI_CONTROLLER(linear_velocity, angular_velocity, err_linear_integral, err_an
     return velocity_left_wheel, velocity_right_wheel, err_linear, err_angular
     
 """
-give the velocity_left_wheel and velocity_right_wheel to the robot
+give the velocity_left_wheel and velocity_right_wheel to the left wheel and right wheel of the robot, respectively.
 """    
     
 
