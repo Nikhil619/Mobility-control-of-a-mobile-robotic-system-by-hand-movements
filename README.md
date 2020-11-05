@@ -7,3 +7,4 @@ https://github.com/Nikhil619/Mobility-control-of-a-mobile-robotic-system-by-hand
 
 ## Angular control
 
+https://github.com/Nikhil619/Mobility-control-of-a-mobile-robotic-system-by-hand-movements/blob/main/angular_control.png
