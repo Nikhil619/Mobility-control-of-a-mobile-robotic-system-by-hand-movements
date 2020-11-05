@@ -1,5 +1,6 @@
 # Mobility-control-of-a-mobile-robotic-system-by-hand-movements
-This model makes the linear and angular velocity control of a mobile robotic system easier
+1. This model makes the linear and angular velocity control of a mobile robotic system easier
+2. Developed on Fire Bird V ATMEGA2560 Robotic Research Platform, Nex Robotics, IIT Bombay
  
 ## Linear control
 
