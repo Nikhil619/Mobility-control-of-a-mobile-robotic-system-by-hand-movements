@@ -3,6 +3,7 @@
 2. Developed on Fire Bird V ATMEGA2560 Robotic Research Platform, Nex Robotics, IIT Bombay
  
 ## Linear control
+Authors: Nikhil Gona, Namrath P, Prithvi Raj, Surya
 
 ![linear_control](https://user-images.githubusercontent.com/67323988/98303915-f8aca280-1fe4-11eb-989c-9dbe39b21929.png)
 
